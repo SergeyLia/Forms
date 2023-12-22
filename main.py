@@ -1,0 +1,177 @@
+import tkinter as tk
+from tkinter import ttk
+from tab2 import create_tab2
+
+def submit_button_clicked():
+    # Действия при нажатии кнопки "Submit" на первой вкладке
+    print("Submit button clicked on Tab 1")
+    # Получение значения из поля ввода на первой вкладке
+    input_value = input_entry.get()
+    print("Input value on Tab 1:", input_value)
+
+# Создание главного окна
+root = tk.Tk()
+root.title("Forms")
+
+# Создание вкладок
+tab_control = ttk.Notebook(root)
+
+# Создание первой вкладки
+tab1 = ttk.Frame(tab_control)
+tab_control.add(tab1, text='Основные данные')
+
+# Вызов функции для создания второй вкладки
+create_tab2(tab_control)
+
+# Добавление вкладок на главное окно
+tab_control.pack(expand=1, fill='both')
+
+# Создание поля ввода и его описания на первой вкладке
+
+citizenship_label = ttk.Label(tab1, text="ОВМ:")
+citizenship_label.grid(row=0, column=0, padx=5, pady=2)
+citizenship_combobox1 = ttk.Combobox(tab1, values=["Ленинсткий", "Заводской", "Кировский", "Фрунзенский", "Октябрьский"])
+citizenship_combobox1.grid(row=0, column=1, padx=5, pady=2)
+
+citizenship_label = ttk.Label(tab1, text="Гражданство:")
+citizenship_label.grid(row=1, column=0, padx=5, pady=2)
+citizenship_combobox2 = ttk.Combobox(tab1, values=["РОССИЯ", "КАЗАХСТАН", "УЗБЕКИСТАН"])
+citizenship_combobox2.grid(row=1, column=1, padx=5, pady=2)
+
+# Создание заголовка на два столбца
+title_label = ttk.Label(tab1, text="Персональные данные", font=("Arial", 10, "bold"))
+title_label.grid(row=2, column=0, columnspan=2, padx=5, pady=1)
+
+# Создание горизонтальной черты на первой вкладке
+separator = ttk.Separator(tab1, orient='horizontal')
+separator.grid(row=3, columnspan=2, sticky='ew', padx=5, pady=1)
+
+citizenship_label = ttk.Label(tab1, text="Пол:")
+citizenship_label.grid(row=4, column=0, padx=5, pady=2)
+citizenship_combobox3 = ttk.Combobox(tab1, values=["МУЖ", "ЖЕН"])
+citizenship_combobox3.grid(row=4, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Фамилия:")
+input_label.grid(row=5, column=0, padx=5, pady=2)
+input_entry1 = ttk.Entry(tab1)
+input_entry1.grid(row=5, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Фамилия род.:")
+input_label.grid(row=6, column=0, padx=5, pady=2)
+input_entry2 = ttk.Entry(tab1)
+input_entry2.grid(row=6, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Имя:")
+input_label.grid(row=7, column=0, padx=5, pady=2)
+input_entry3 = ttk.Entry(tab1)
+input_entry3.grid(row=7, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Отчество:")
+input_label.grid(row=7, column=0, padx=5, pady=2)
+input_entry4 = ttk.Entry(tab1)
+input_entry4.grid(row=7, column=1, padx=5, pady=2)
+
+# Создание заголовка на два столбца
+title_label = ttk.Label(tab1, text="Сведения о рождении", font=("Arial", 10, "bold"))
+title_label.grid(row=8, column=0, columnspan=2, padx=5, pady=1)
+
+# Создание горизонтальной черты на первой вкладке
+separator = ttk.Separator(tab1, orient='horizontal')
+separator.grid(row=9, columnspan=2, sticky='ew', padx=5, pady=1)
+
+input_label = ttk.Label(tab1, text="Дата:")
+input_label.grid(row=10, column=0, padx=5, pady=2)
+input_entry5 = ttk.Entry(tab1)
+input_entry5.grid(row=10, column=1, padx=5, pady=2)
+
+citizenship_label = ttk.Label(tab1, text="Страна:")
+citizenship_label.grid(row=11, column=0, padx=5, pady=2)
+citizenship_combobox4 = ttk.Combobox(tab1, values=["РОССИЯ", "КАЗАХСТАН", "УЗБЕКИСТАН"])
+citizenship_combobox4.grid(row=11, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Регион:")
+input_label.grid(row=12, column=0, padx=5, pady=2)
+input_entry6 = ttk.Entry(tab1)
+input_entry6.grid(row=12, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Район:")
+input_label.grid(row=13, column=0, padx=5, pady=2)
+input_entry7 = ttk.Entry(tab1)
+input_entry7.grid(row=13, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Город:")
+input_label.grid(row=14, column=0, padx=5, pady=2)
+input_entry8 = ttk.Entry(tab1)
+input_entry8.grid(row=14, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Населенный пунк:")
+input_label.grid(row=15, column=0, padx=5, pady=2)
+input_entry9 = ttk.Entry(tab1)
+input_entry9.grid(row=15, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Как в паспорте:")
+input_label.grid(row=16, column=0, padx=5, pady=2)
+input_entry10 = tk.Text(tab1, height=3, width=20)
+input_entry10.grid(row=17, column=0, columnspan=2, sticky='ew', padx=5, pady=2)
+
+# Создание заголовка на два столбца
+title_label = ttk.Label(tab1, text="Документ", font=("Arial", 10, "bold"))
+title_label.grid(row=21, column=0, columnspan=2, padx=5, pady=1)
+
+# Создание горизонтальной черты на первой вкладке
+separator = ttk.Separator(tab1, orient='horizontal')
+separator.grid(row=22, columnspan=2, sticky='ew', padx=5, pady=1)
+
+citizenship_combobox5 = ttk.Combobox(tab1, values=["ПАСПОРТ", "НЕ ПАСПОРТ"])
+citizenship_combobox5.grid(row=23, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Серия:")
+input_label.grid(row=24, column=0, padx=5, pady=2)
+input_entry11 = ttk.Entry(tab1)
+input_entry11.grid(row=24, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Номер:")
+input_label.grid(row=25, column=0, padx=5, pady=2)
+input_entry12 = ttk.Entry(tab1)
+input_entry12.grid(row=25, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Кем выдан:")
+input_label.grid(row=26, column=0, padx=5, pady=2)
+input_entry = tk.Text(tab1, height=3, width=20)
+input_entry.grid(row=27, column=0, columnspan=2, sticky='ew', padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Код подразделения УФМС:")
+input_label.grid(row=28, column=0, padx=5, pady=2)
+input_entry = ttk.Entry(tab1)
+input_entry.grid(row=28, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Дата выдачи:")
+input_label.grid(row=29, column=0, padx=5, pady=2)
+input_entry = ttk.Entry(tab1)
+input_entry.grid(row=29, column=1, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Действует до:")
+input_label.grid(row=30, column=0, padx=5, pady=2)
+input_entry = ttk.Entry(tab1)
+input_entry.grid(row=30, column=1, padx=5, pady=2)
+
+
+# Создание заголовка на два столбца
+title_label = ttk.Label(tab1, text="Регистрация по месту жительства", font=("Arial", 10, "bold"))
+title_label.grid(row=0, column=2, columnspan=2, padx=5, pady=1)
+
+# Создание горизонтальной черты на первой вкладке
+separator = ttk.Separator(tab1, orient='horizontal')
+separator.grid(row=1, columnspan=2, column=2, sticky='ew', padx=5, pady=1)
+
+citizenship_combobox = ttk.Combobox(tab1, values=["жительства", "пребывания", "обращения"])
+citizenship_combobox.grid(row=2, column=2, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Регион:")
+input_label.grid(row=3, column=2, padx=5, pady=2)
+input_entry = ttk.Entry(tab1)
+input_entry.grid(row=3, column=3, padx=5, pady=2)
+
+
+# Запуск главного цикла обработки событий
+root.mainloop()
