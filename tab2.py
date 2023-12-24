@@ -19,6 +19,8 @@ def create_tab2(tab_control):
     input_entry = ttk.Entry(tab2)
     input_entry.grid(row=0, column=1, padx=5, pady=5)
 
+
+
     # Создание кнопки "Submit" на второй вкладке
     submit_button = ttk.Button(tab2, text="Submit", command=submit_button_clicked)
     submit_button.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
