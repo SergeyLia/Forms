@@ -116,86 +116,91 @@ input_entry10.grid(row=17, column=0, columnspan=2, sticky='ew', padx=5, pady=2)
 
 # Создание заголовка на два столбца
 title_label = ttk.Label(tab1, text="Документ", font=("Arial", 10, "bold"))
-title_label.grid(row=21, column=0, columnspan=2, padx=5, pady=1)
-
-# Создание горизонтальной черты на первой вкладке
-separator = ttk.Separator(tab1, orient='horizontal')
-separator.grid(row=22, columnspan=2, sticky='ew', padx=5, pady=1)
-
-citizenship_combobox5 = ttk.Combobox(tab1, values=["ПАСПОРТ", "НЕ ПАСПОРТ"])
-citizenship_combobox5.grid(row=23, column=1, padx=5, pady=2)
-
-input_label = ttk.Label(tab1, text="Серия:")
-input_label.grid(row=24, column=0, padx=5, pady=2)
-input_entry11 = ttk.Entry(tab1)
-input_entry11.grid(row=24, column=1, padx=5, pady=2)
-
-input_label = ttk.Label(tab1, text="Номер:")
-input_label.grid(row=25, column=0, padx=5, pady=2)
-input_entry12 = ttk.Entry(tab1)
-input_entry12.grid(row=25, column=1, padx=5, pady=2)
-
-input_label = ttk.Label(tab1, text="Кем выдан:")
-input_label.grid(row=26, column=0, padx=5, pady=2)
-input_entry13 = tk.Text(tab1, height=3, width=20)
-input_entry13.grid(row=27, column=0, columnspan=2, sticky='ew', padx=5, pady=2)
-
-input_label = ttk.Label(tab1, text="Код подразделения УФМС:")
-input_label.grid(row=28, column=0, padx=5, pady=2)
-input_entry14 = ttk.Entry(tab1)
-input_entry14.grid(row=28, column=1, padx=5, pady=2)
-
-input_label = ttk.Label(tab1, text="Дата выдачи:")
-input_label.grid(row=29, column=0, padx=5, pady=2)
-input_entry15 = ttk.Entry(tab1)
-input_entry15.grid(row=29, column=1, padx=5, pady=2)
-
-input_label = ttk.Label(tab1, text="Действует до:")
-input_label.grid(row=30, column=0, padx=5, pady=2)
-input_entry16 = ttk.Entry(tab1)
-input_entry16.grid(row=30, column=1, padx=5, pady=2)
-
-
-# Создание заголовка на второго столбца
-title_label = ttk.Label(tab1, text="Регистрация по месту жительства", font=("Arial", 10, "bold"))
-title_label.grid(row=0, column=2, columnspan=2, padx=5, pady=1)
+title_label.grid(row=0, column=2, columnspan=2, padx=5, pady=2, sticky="s")
 
 # Создание горизонтальной черты на первой вкладке
 separator = ttk.Separator(tab1, orient='horizontal')
 separator.grid(row=1, columnspan=2, column=2, sticky='ew', padx=5, pady=1)
 
+citizenship_combobox5 = ttk.Combobox(tab1, values=["ПАСПОРТ", "НЕ ПАСПОРТ"])
+citizenship_combobox5.grid(row=2, column=2, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Серия:")
+input_label.grid(row=3, column=2, padx=5, pady=2)
+input_entry11 = ttk.Entry(tab1)
+input_entry11.grid(row=3, column=3, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Номер:")
+input_label.grid(row=4, column=2, padx=5, pady=2)
+input_entry12 = ttk.Entry(tab1)
+input_entry12.grid(row=4, column=3, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Кем выдан:")
+input_label.grid(row=5, column=2, padx=5, pady=2)
+input_entry13 = tk.Text(tab1, height=3, width=20)
+input_entry13.grid(row=6, column=2, columnspan=2, sticky='ew', padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Код подразделения УФМС:")
+input_label.grid(row=7, column=2, padx=5, pady=2)
+input_entry14 = ttk.Entry(tab1)
+input_entry14.grid(row=7, column=3, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Дата выдачи:")
+input_label.grid(row=8, column=2, padx=5, pady=2)
+input_entry15 = ttk.Entry(tab1)
+input_entry15.grid(row=8, column=3, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Действует до:")
+input_label.grid(row=9, column=2, padx=5, pady=2)
+input_entry16 = ttk.Entry(tab1)
+input_entry16.grid(row=9, column=3, padx=5, pady=2)
+
+
+# Создание заголовка на второго столбца
+title_label = ttk.Label(tab1, text="Регистрация по месту жительства", font=("Arial", 10, "bold"))
+title_label.grid(row=10, column=2, columnspan=2, padx=5, pady=2, sticky="s")
+
+# Создание горизонтальной черты на первой вкладке
+separator = ttk.Separator(tab1, orient='horizontal')
+separator.grid(row=11, columnspan=2, column=2, sticky='ew', padx=5, pady=1)
+
 citizenship_combobox6 = ttk.Combobox(tab1, values=["жительства", "пребывания", "обращения"])
-citizenship_combobox6.grid(row=2, column=2, padx=5, pady=2)
+citizenship_combobox6.grid(row=12, column=2, padx=5, pady=2)
 
 input_label = ttk.Label(tab1, text="Регион:")
-input_label.grid(row=3, column=2, padx=5, pady=2)
+input_label.grid(row=13, column=2, padx=5, pady=2)
 input_entry17 = ttk.Entry(tab1)
-input_entry17.grid(row=3, column=3, padx=5, pady=2)
+input_entry17.grid(row=13, column=3, padx=5, pady=2)
 
 input_label = ttk.Label(tab1, text="Район:")
-input_label.grid(row=4, column=2, padx=5, pady=2)
+input_label.grid(row=14, column=2, padx=5, pady=2)
 input_entry18 = ttk.Entry(tab1)
-input_entry18.grid(row=4, column=3, padx=5, pady=2)
+input_entry18.grid(row=14, column=3, padx=5, pady=2)
 
 input_label = ttk.Label(tab1, text="Город:")
-input_label.grid(row=5, column=2, padx=5, pady=2)
+input_label.grid(row=15, column=2, padx=5, pady=2)
 input_entry19 = ttk.Entry(tab1)
-input_entry19.grid(row=5, column=3, padx=5, pady=2)
+input_entry19.grid(row=15, column=3, padx=5, pady=2)
 
 input_label = ttk.Label(tab1, text="Район города:")
-input_label.grid(row=6, column=2, padx=5, pady=2)
+input_label.grid(row=16, column=2, padx=5, pady=2)
 input_entry20 = ttk.Entry(tab1)
-input_entry20.grid(row=6, column=3, padx=5, pady=2)
+input_entry20.grid(row=16, column=3, padx=5, pady=2)
 
 input_label = ttk.Label(tab1, text="Нас. пункт:")
-input_label.grid(row=7, column=2, padx=5, pady=2)
+input_label.grid(row=17, column=2, padx=5, pady=2)
 input_entry21 = ttk.Entry(tab1)
-input_entry21.grid(row=7, column=3, padx=5, pady=2)
+input_entry21.grid(row=17, column=3, padx=5, pady=2)
 
 input_label = ttk.Label(tab1, text="Улица:")
-input_label.grid(row=3, column=2, padx=5, pady=2)
+input_label.grid(row=18, column=2, padx=5, pady=2)
 input_entry22 = ttk.Entry(tab1)
-input_entry22.grid(row=3, column=3, padx=5, pady=2)
+input_entry22.grid(row=18, column=3, padx=5, pady=2)
+
+input_label = ttk.Label(tab1, text="Улица:")
+input_label.grid(row=18, column=2, padx=5, pady=2)
+input_entry22 = ttk.Entry(tab1)
+input_entry22.grid(row=18, column=3, padx=5, pady=2)
 
 
 # Запуск главного цикла обработки событий
