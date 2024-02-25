@@ -2,12 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 from tab2 import create_tab2
 
-def submit_button_clicked():
-    # Действия при нажатии кнопки "Submit" на первой вкладке
-    print("Submit button clicked on Tab 1")
-    # Получение значения из поля ввода на первой вкладке
-    input_value = input_entry.get()
-    print("Input value on Tab 1:", input_value)
 
 # Создание главного окна
 root = tk.Tk()
